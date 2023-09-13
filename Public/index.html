@@ -9,66 +9,66 @@
 <body>
     
     <div id="wrapper" class="h-screen w-screen" >
-     <div class="main_container">
+     <div class="main_container h-full w-full flex justify-center items-center">
         
-    <div class="weather_container">
-     <div>Weather App</div>
+    <div class="weather_container mt-14 w-[60vh] relative justify-center">
+     <div class="text-center text-white text-3xl mb-4 font-extrabold">Weather App</div>
        <!-- Weather Container -->
        <!-- Option -->
-       <div class="switch_tab">
-           <p class="user_weather cursor-pointer">Your Weather</p>
+       <div class="switch_tab flex justify-between">
+           <p class="user_weather cursor-pointer ">Your Weather</p>
             <p class="search_weather cursor-pointer">Search Weather</p>
           </div>
           
         <div>
           <!-- Grant Access -->
-          <div class="grant_access opacity-0">
+          <div class="grant_access opacity-0 w-full absolute  top-28 gap-1 flex flex-col justify-center items-center">
                <img src="./assets/location.png" alt="" loading="lazy" height="80" width="80">
-               <p>Grant Location Access</p>
-               <p>Allow Access to get weather Information</p>
-               <p class="grant">Grant Access</p>
+               <p class="text-white text-xl font-semibold">Grant Location Access</p>
+               <p class="text-white text-sm">Allow Access to get weather Information</p>
+               <p class="grant text-white bg-cyan-600 px-4 mt-2  py-1 rounded-md cursor-pointer z-[1]">Grant Access</p>
           </div>
 
           <!-- Search tab -->
 
-          <form class="search_form opacity-0">
-            <input type="text" name="" id="city" placeholder="Search city here...">
-            <p  class="search_btn cursor-pointer bg-black"><img class="search_btn" src="./assets/search.png" alt="" loading="lazy" height="20" width="20"></p>
+          <form class="search_form opacity-0 flex w-full mt-10 mb-6">
+            <input class="bg-slate-500 text-white border rounded-xl px-4 mx-4 w-[90%] z-[2] border-white" type="text" name="" id="city" placeholder="Search city here...">
+            <p  class="search_btn cursor-pointer bg-cyan-600 h-7 w-7 flex justify-center items-center z-[2] rounded-full"><img class="search_btn" src="./assets/search.png" alt="" loading="lazy" height="20" width="20"></p>
           </form>
           <!-- Loading page -->
-          <div class="loading_page opacity-0">
-            <img src="./assets/loading.gif" alt="" height="120" width="120">
-            <p>Loading...</p>
-          </div>
-             
-           <!-- Weather -->
-           <div class="weather_data opacity-0">
-            <div>
-                <p search_city ></p>
-                 <img flag>
+          
+          <!-- Weather -->
+           <div class="weather_data opacity-0 flex flex-col justify-center items-center w-full ">
+             <div class="flex items-center gap-[2px] z-0">
+                <p search_city class="text-2xl text-white font-semibold" ></p>
+                 <img flag class="h-5 w-5" >
             </div>
-            <p discription></p>
+            <p discription class="text-base text-white font-semibold uppercase "></p>
             <img discription_img>
-            <p class="temp"> °C</p>
-            <div>
-                <div data_windspeed>
+            <p class="temp text-3xl text-white mb-6"></p>
+            <div class="w-full flex justify-evenly mt-0">
+                <div data_windspeed class="w-[30%] flex flex-col justify-center items-center  ">
                     <img src="./assets/wind.png" alt="" loading="lazy" height="120" width="120">
                     <p>WINDSPEED</p>
                     <p speed></p>
-                </div>
-                <div data_humidity>
+                  </div>
+                  <div data_humidity class="w-[30%] flex flex-col justify-center items-center ">
                     <img src="./assets/humidity.png" alt="" height="120" width="120">
                     <p>Humidity</p>
                     <p humid></p>
                 </div>
-                <div data_cloudness>
-                    <img src="./assets/cloud.png" alt="" height="120" width="120">
+                <div data_cloudness class="w-[30%] flex flex-col justify-center items-center ">
+                  <img src="./assets/cloud.png" alt="" height="120" width="120">
                     <p>Cloudness</p>
                     <p cloud></p>
                 </div>
                 
-            </div>
-
+              </div>
+              
+              <div class="loading_page opacity-0">
+                <img src="./assets/loading.gif" alt="" height="120" width="120">
+                <p>Loading...</p>
+              </div>
            </div>
 
 

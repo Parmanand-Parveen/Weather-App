@@ -66,7 +66,7 @@ function renderWeather(data) {
   flag.src = `https://flagcdn.com/144x108/${data?.sys?.country.toLowerCase()}.png`;
   discription.innerHTML = data?.weather?.[0]?.description;
   discription_img.src = `http://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
-  temp.innerHTML = `${data?.main?.temp - 273.15} °C`;
+  temp.innerHTML = `${Math.floor(data?.main?.temp) - 273} °C`;
   speed.innerHTML = data?.wind?.speed + " " + "m/s";
   humid.innerHTML = data?.main?.humidity + " " + "%";
   cloud.innerHTML = data?.clouds?.all + " " + "%";
